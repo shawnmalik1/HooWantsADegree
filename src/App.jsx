@@ -10,18 +10,21 @@ import Footer from './Footer';
 import Homepage from './Homepage';
 import DegreeBuilder from './DegreeBuilder';
 import NavButton from './NavButton'
+import TextBox from './TextBox';
+
+const mode = "light-mode"
 
 function App() {
     return (
         <div>
-            <Header />
+            <Header mode={mode} />
             <Router>
                 <Routes>
-                    <Route path="/" element={<Homepage />} />
-                    <Route path="/degree-builder" element={<DegreeBuilder />} />
+                    <Route path="/" element={<Homepage mode={mode} />} />
+                    <Route path="/degree-builder" element={<DegreeBuilder mode={mode} />} />
                 </Routes>
             </Router>
-            <Footer />
+            {/* <Footer /> */}
         </div>
     );
 }

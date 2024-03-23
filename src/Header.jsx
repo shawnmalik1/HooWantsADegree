@@ -2,11 +2,12 @@ import React from 'react';
 import uvaLogo from  './Virginia Cavaliers logo.svg';
 import './index.css';
 
-function Header() {
+function Header(mode) {
+    let headerMode = `header, ${mode}`;
+    
     return (
-        <header className='header, light-mode'>
-            <img src={uvaLogo} alt="UVA Logo" className='logo-small' />
-            <h1>Hoo Wants A Degree?</h1>
+        <header className={headerMode}>
+            <h1><a href='./'><img src={uvaLogo} alt="UVA Logo" className='logo-small'></img></a> Hoo Wants A Degree?</h1>
         </header>
     );
 }
