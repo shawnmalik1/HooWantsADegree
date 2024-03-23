@@ -45,3 +45,19 @@ body {
   background-color: var(--secondary-color);
   color: var(--primary-color);
 }
+
+.main-body {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+
+.logo-small {
+  height: 50px;
+  margin-right: 20px;
+}
+
+.logo-large {
+  height: 300px;
+  margin-right: 20px;
+}
