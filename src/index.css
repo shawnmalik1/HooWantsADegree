@@ -1,13 +1,47 @@
+/* Import Roboto font */
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Roboto', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Base styles */
+:root {
+  /* Define color variables */
+  --uva-blue: #232d4b; /* UVA Blue */
+  --uva-orange: #f84c1e; /* UVA Orange */
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14pt; /* 14pt font size */
+}
+
+/* Light mode styles */
+.light-mode {
+  --primary-color: var(--uva-blue);
+  --secondary-color: var(--uva-orange);
+  --font-color: black;
+  background-color: #ffffff;
+  color: var(--font-color);
+}
+
+/* Dark mode styles */
+.dark-mode {
+  --primary-color: var(--uva-orange);
+  --secondary-color: var(--uva-blue);
+  --font-color: white;
+  background-color: #121212;
+  color: var(--font-color);
+}
+
+/* Example usage of primary and secondary colors */
+.header {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.footer {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
 }
