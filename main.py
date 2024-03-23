@@ -1,7 +1,8 @@
 import UVAEngineeringCourses
+import ProximityAPIIntegration
 
 def run_program():
-    UVAEngineeringCourses.gpt()
+    ProximityAPIIntegration.gpt()
 
 
 
