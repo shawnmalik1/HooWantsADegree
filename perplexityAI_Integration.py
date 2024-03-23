@@ -1,10 +1,10 @@
 from openai import OpenAI
 
-def gpt():
+def perplexityAI(majorName):
     with open('.env', 'r') as file:
         API_KEY = file.readline()
-    model = 'llama-2-70b-chat'
-    prompt = "Give me a 4 year plan for a Computer Science major at the University Of Virginia based on the University Of Virginia's requirements."
+    model = 'pplx-7b-online'
+    prompt = f'Give me a 4 year plan semester by semester for a {majorName} major at the University Of Virginia based on the University Of Virginia requirements. Please dont repeat classes'
 
     messages = [
         {
