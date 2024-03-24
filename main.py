@@ -1,8 +1,8 @@
 import UVAEngineeringCourses
-import ProximityAPIIntegration
+import perplexityAI_Integration
 
 def run_program():
-    ProximityAPIIntegration.gpt()
+    perplexityAI_Integration.perplexityAI('Electrical Engineering')
 
 
 
