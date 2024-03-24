@@ -30,9 +30,6 @@ function EmailResults({mode}) {
             <p>If you would like to receive a PDF of your results, enter your email below.</p>
             <TextBox />
             <br></br>
-            <button onClick={email}>
-                Send to Email
-            </button>
             <button onClick={downloadPDF}>
                 Download PDF
             </button>

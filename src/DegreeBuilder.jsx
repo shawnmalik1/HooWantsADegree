@@ -37,9 +37,6 @@ const semesters = [
 
 const courses = [];
 
-
-
-
 function DegreeBuilder({ mode }) {
     const [selectedMajor, setSelectedMajor] = useState('');
     const [selectedYear, setSelectedYear] = useState('');
@@ -114,7 +111,7 @@ function DegreeBuilder({ mode }) {
             <br></br>
             
             {/* Button to save data */}
-            <NavButton destination='/email-results' text='Hoo wants a degree?'></NavButton>
+            <NavButton destination='/results' text='Hoo wants a degree?'></NavButton>
         </div>
     );
 }
