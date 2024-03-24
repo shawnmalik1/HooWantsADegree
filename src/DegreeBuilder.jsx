@@ -18,10 +18,10 @@ const majors = [
 ];
 
 const years = [
-    { value: '1', label: 'Freshman' },
-    { value: '2', label: 'Sophomore' },
-    { value: '3', label: 'Junior' },
-    { value: '4', label: 'Senior' },
+    { value: '1', label: 'First year' },
+    { value: '2', label: 'Second year' },
+    { value: '3', label: 'Third year' },
+    { value: '4', label: 'Fourth year' },
 ];
 
 const semesters = [
@@ -35,26 +35,23 @@ const semesters = [
     { value: '8', label: '8' },
 ];
 
-const courses = [];
+const courses = []; // Assuming this is meant to be populated dynamically
 
 function DegreeBuilder({ mode }) {
-    const [selectedMajor, setSelectedMajor] = useState('');
-    const [selectedYear, setSelectedYear] = useState('');
-    const [selectedSemesters, setSelectedSemesters] = useState('');
-    const [selectedCourses, setSelectedCourses] = useState([]);
-    const [professionalInterests, setProfessionalInterests] = useState('');
-    const [personalInterests, setPersonalInterests] = useState('');
+    const [selectedMajor, setSelectedMajor] = useState(''); // !
+    const [selectedYear, setSelectedYear] = useState(''); // !
+    const [selectedSemesters, setSelectedSemesters] = useState(''); // !
+    const [selectedCourses, setSelectedCourses] = useState([]); // !
+    const [professionalInterests, setProfessionalInterests] = useState(''); // !
+    const [personalInterests, setPersonalInterests] = useState(''); // !
 
-    const pageMode = `main-page ${mode}`;
+    const pageMode = `main-page ${mode}`; // !
 
-    // Explicitly handle the dropdown change event
     const handleDropdownChange = (setter) => (event) => {
-        // Assuming the event contains a 'value' property
         const value = event.value || (event.target && event.target.value);
         setter(value);
     };
 
-    // Explicitly handle the text box change event
     const handleTextBoxChange = (setter) => (event) => {
         setter(event.target.value);
     };
@@ -64,34 +61,39 @@ function DegreeBuilder({ mode }) {
     const semesterSelection = <Dropdown items={semesters} onChange={handleDropdownChange(setSelectedSemesters)} />;
     const courseSelection = <Dropdown items={courses} onChange={handleDropdownChange(setSelectedCourses)} isMulti />;
     const profInterests = <TextBox onChange={handleTextBoxChange(setProfessionalInterests)} placeholder="Enter your professional interests" />;
-    const persIntersts = <TextBox onChange={handleTextBoxChange(setPersonalInterests)} placeholder="Enter your personal interests" />;
+    const persInterests = <TextBox onChange={handleTextBoxChange(setPersonalInterests)} placeholder="Enter your personal interests" />; // !
 
-    const handleSave = () => {
-        // Construct data object with the values
-        const data = {
-            major: majorSelection.value,
-            year: yearSelection.value,
-            semesters: semesterSelection.value,
-            courses: selectedCourses.value,
-            professionalInterests: profInterests.target.value,
-            personalInterests: persIntersts.target.value
+    const handleSave = async () => { // !
+        const data = { // !
+            major: selectedMajor, // !
+            year: selectedYear, // !
+            semesters: selectedSemesters, // !
+            courses: selectedCourses, // !
+            professionalInterests: professionalInterests, // !
+            personalInterests: personalInterests // !
         };
 
-        // Convert data object to a string
-        const text = JSON.stringify(data, null, 2); // Pretty print the JSON
+        try {
+            const response = await fetch('http://localhost:3001/submit-degree-data', { // !
+                method: 'POST', // !
+                headers: { // !
+                    'Content-Type': 'application/json', // !
+                }, // !
+                body: JSON.stringify(data), // !
+            }); // !
 
-        // Create a blob containing the text
-        const blob = new Blob([text], { type: 'text/plain' });
-
-        // Create a temporary anchor element to download the file
-        const anchor = document.createElement('a');
-        anchor.download = 'degree_data.txt';
-        anchor.href = URL.createObjectURL(blob);
-        anchor.click();
-
-        // Release the object URL
-        URL.revokeObjectURL(anchor.href);
-    };
+            if (response.ok) { // !
+                console.log('Data sent to Node.js successfully'); // !
+                // Handle success response
+            } else { // !
+                console.error('Failed to send data to Node.js'); // !
+                // Handle error response
+            } // !
+        } catch (error) { // !
+            console.error('Error sending data to Node.js:', error); // !
+            // Handle request error
+        } // !
+    }; // !
 
     return (
         <div className={pageMode}>
@@ -107,11 +109,11 @@ function DegreeBuilder({ mode }) {
             <h3>Enter your professional interests:</h3>
             {profInterests}
             <h3>Enter your personal interests:</h3>
-            {persIntersts}
+            {persInterests}
             <br></br>
             
             {/* Button to save data */}
-            <NavButton destination='/results' text='Hoo wants a degree?'></NavButton>
+            <button onClick={handleSave}>Save Degree Plan</button> {/* Changed from NavButton to a regular button to trigger handleSave */} // !
         </div>
     );
 }
