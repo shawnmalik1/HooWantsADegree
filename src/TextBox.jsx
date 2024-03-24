@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './index.css';
 
 function TextBox() {
-    const [text, setText] = useState(null);
+    const [text, setText] = useState('');
 
     const changeText = (updatedText) => {
         setText(updatedText.target.value);

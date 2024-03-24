@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Dropdown from './Dropdown';
 import TextBox from './TextBox';
 import NavButton from './NavButton';
@@ -37,24 +37,84 @@ const semesters = [
 
 const courses = [];
 
-function DegreeBuilder({mode}) {
-    let pageMode = `main-page, ${mode}`;
+
+
+
+function DegreeBuilder({ mode }) {
+    const [selectedMajor, setSelectedMajor] = useState('');
+    const [selectedYear, setSelectedYear] = useState('');
+    const [selectedSemesters, setSelectedSemesters] = useState('');
+    const [selectedCourses, setSelectedCourses] = useState([]);
+    const [professionalInterests, setProfessionalInterests] = useState('');
+    const [personalInterests, setPersonalInterests] = useState('');
+
+    const pageMode = `main-page ${mode}`;
+
+    // Explicitly handle the dropdown change event
+    const handleDropdownChange = (setter) => (event) => {
+        // Assuming the event contains a 'value' property
+        const value = event.value || (event.target && event.target.value);
+        setter(value);
+    };
+
+    // Explicitly handle the text box change event
+    const handleTextBoxChange = (setter) => (event) => {
+        setter(event.target.value);
+    };
+
+    const majorSelection = <Dropdown items={majors} onChange={handleDropdownChange(setSelectedMajor)} />;
+    const yearSelection = <Dropdown items={years} onChange={handleDropdownChange(setSelectedYear)} />;
+    const semesterSelection = <Dropdown items={semesters} onChange={handleDropdownChange(setSelectedSemesters)} />;
+    const courseSelection = <Dropdown items={courses} onChange={handleDropdownChange(setSelectedCourses)} isMulti />;
+    const profInterests = <TextBox onChange={handleTextBoxChange(setProfessionalInterests)} placeholder="Enter your professional interests" />;
+    const persIntersts = <TextBox onChange={handleTextBoxChange(setPersonalInterests)} placeholder="Enter your personal interests" />;
+
+    const handleSave = () => {
+        // Construct data object with the values
+        const data = {
+            major: majorSelection.value,
+            year: yearSelection.value,
+            semesters: semesterSelection.value,
+            courses: selectedCourses.value,
+            professionalInterests: profInterests.target.value,
+            personalInterests: persIntersts.target.value
+        };
+
+        // Convert data object to a string
+        const text = JSON.stringify(data, null, 2); // Pretty print the JSON
+
+        // Create a blob containing the text
+        const blob = new Blob([text], { type: 'text/plain' });
+
+        // Create a temporary anchor element to download the file
+        const anchor = document.createElement('a');
+        anchor.download = 'degree_data.txt';
+        anchor.href = URL.createObjectURL(blob);
+        anchor.click();
+
+        // Release the object URL
+        URL.revokeObjectURL(anchor.href);
+    };
 
     return (
-        <div class={pageMode}>
+        <div className={pageMode}>
+            {/* Dropdowns and text boxes */}
             <h3>Select your major:</h3>
-            <Dropdown items={majors} />
+            {majorSelection}
             <h3>What is your current year?</h3>
-            <Dropdown items={years} />
+            {yearSelection}
             <h3>How many semesters do you have left?</h3>
-            <Dropdown items={semesters} />
+            {semesterSelection}
             <h3>Select all courses you have taken so far or already have credit for:</h3>
-            <Dropdown items={courses} />
+            {courseSelection}
             <h3>Enter your professional interests:</h3>
-            <TextBox />
+            {profInterests}
             <h3>Enter your personal interests:</h3>
-            <TextBox />
-            <NavButton destination='/email-results' text='Hoo wants a degree?' />
+            {persIntersts}
+            <br></br>
+            
+            {/* Button to save data */}
+            <NavButton destination='/email-results' text='Hoo wants a degree?'></NavButton>
         </div>
     );
 }
