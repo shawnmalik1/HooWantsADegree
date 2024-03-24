@@ -1,41 +1,14 @@
-import React, { useState } from 'react';
-import './index.css';
-import TextFile from './TextFile';
+import React from 'react';
+import './index.css'; // Make sure to create a corresponding CSS file for styling
+import cpeImage from './cpe.png'; // Import the image from the src directory
 
-function EmailResults({ mode }) {
-    let pageMode = `main-page ${mode}`; // Removed the comma for proper class concatenation
-
-    const downloadPDF = () => {
-        const pdf = '/Users/smyansengupta/Documents/GitHub/HooWantsADegree/src/schedule.pdf';
-        const pdfLink = document.createElement('a');
-        pdfLink.href = pdf;
-        pdfLink.download = 'degree-plan.pdf';
-        document.body.appendChild(pdfLink);
-        pdfLink.click();
-        document.body.removeChild(pdfLink);
-    };
-
-    const displaySchedule = () => {
-        document.getElementById('compEngSchedule.txt')
-            .addEventListener('change', function () {
-                let reader = new FileReader();
-                reader.onload = function () {
-                    document.getElementById('output').textContent = reader.result;
-                };
-                reader.readAsText(this.files[0]);
-            });
-    };
-
-    return (
-        <div className={pageMode}>
-            <h1>Your Results</h1>
-            <img src='/Screenshot_2024-03-24_at_11.12.57_AM.png' alt='Degree Plan'></img>
-            <br></br>
-            <button onClick={downloadPDF}>
-                Download PDF
-            </button>
-        </div>
-    );
+function Results() {
+  return (
+    <div className="results-container">
+      <img src={cpeImage} alt="CPE" className="centered-image" />
+      <button className="download-button">Download PDF</button>
+    </div>
+  );
 }
 
-export default EmailResults;
+export default Results;
