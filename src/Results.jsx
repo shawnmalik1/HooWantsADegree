@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import './index.css';
 import TextFile from './TextFile';
 
-function EmailResults({mode}) {
-    let pageMode = `main-page, ${mode}`;
+function EmailResults({ mode }) {
+    let pageMode = `main-page ${mode}`; // Removed the comma for proper class concatenation
 
     const downloadPDF = () => {
         const pdf = '/Users/smyansengupta/Documents/GitHub/HooWantsADegree/src/schedule.pdf';
@@ -17,19 +17,19 @@ function EmailResults({mode}) {
 
     const displaySchedule = () => {
         document.getElementById('compEngSchedule.txt')
-        .addEventListener('change', function() {
-            let reader = new FileReader();
-            reader.onload = function() {
-                document.getElementById('output').textContent = reader.result;
-            }
-            reader.readAsText(this.files[0]);
-        });
-    }
+            .addEventListener('change', function () {
+                let reader = new FileReader();
+                reader.onload = function () {
+                    document.getElementById('output').textContent = reader.result;
+                };
+                reader.readAsText(this.files[0]);
+            });
+    };
 
     return (
-        <div class={pageMode}>
+        <div className={pageMode}>
             <h1>Your Results</h1>
-            <img src='Screenshot 2024-03-24 at 11.12.57 AM.png'></img>
+            <img src='/Screenshot_2024-03-24_at_11.12.57_AM.png' alt='Degree Plan'></img>
             <br></br>
             <button onClick={downloadPDF}>
                 Download PDF
