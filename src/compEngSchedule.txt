@@ -1,0 +1,61 @@
+Here's a suggested 4-year plan for a Computer Engineering major at the University of Virginia based on the provided requirements:
+
+**Year 1:**
+Semester 1:
+- APMA 1110 - Single Variable Calculus II (Credits: 4)
+- CHEM 1610 - Introduction to Chemistry I (Credits: 3)
+- CHEM 1611 - Introduction to Chemistry Lab (Credits: 1)
+- ENGR 1624 - Introduction to Engineering (Credits: 3)
+- STS 1500 - Science, Technology, and Contemporary Issues (Credits: 3)
+
+Semester 2:
+- APMA 2120 - Multivariable Calculus III (Credits: 4)
+- CS 111X - Introduction to Programming (Credits: 3)
+- PHYS 1425/1429 - Introductory Physics I & Lab (Credits: 4)
+- Humanities & Social Science Elective (Credits: 3)
+
+**Year 2:**
+Semester 3:
+- ECE 2300 - Applied Circuits (Credits: 3)
+- ECE 2330 - Digital Logic Design (Credits: 3)
+- CS 2100 - Data Structures and Algorithms 1 (Credits: 3)
+- APMA 2130 - Ordinary Differential Equations (Credits: 4)
+- CS 2120 - Discrete Mathematics (Credits: 3)
+
+Semester 4:
+- CS 2130 - Computer Systems and Organization 1 (Credits: 4)
+- ECE 3430 - Introduction to Embedded Computer Systems (Credits: 3)
+- ECE 2600 - Electronics (Credits: 4)
+- ECE 2700 - Signals and Systems (Credits: 3)
+
+**Year 3:**
+Semester 5:
+- ECE 2200 - Applied Physics (Credits: 4)
+- CS 3130 - Computer Systems and Organization II (Credits: 4)
+- CS 3140 - Software Development Essentials (Credits: 3)
+- ECE/CS Elective 1 (Credits: 3)
+- Unrestricted Elective 1 (Credits vary)
+
+Semester 6:
+- STS 2600 - Engineering Ethics (Credits: 3)
+- ECE 4435 - Computer Architecture and Design (Credits: 4)
+- APMA 3100 - Probability (Credits: 4)
+- ECE/CS Elective 2 (Credits: 3)
+- Unrestricted Elective 2 (Credits vary)
+
+**Year 4:**
+Semester 7:
+- STS 4500 - STS and Engineering Practice (Credits: 3)
+- ECE/CS Elective 3 (Credits: 4)
+- ECE/CS Elective 4 (Credits: 4)
+- ECE 4991 - MDE Capstone Design (Credits: 3)
+- Unrestricted Elective 3 (Credits vary)
+
+Semester 8:
+- STS 4600 - The Engineer, Ethics, and Professional Responsibility (Credits: 3)
+- ECE/CS Elective 5 (Credits: 4)
+- HSS Elective 2 (Credits vary)
+- HSS Elective 3 (Credits vary)
+- Unrestricted Elective 4 (Credits vary)
+
+Please note that this plan assumes that all prerequisites are met and that the schedule remains consistent throughout the four years. Additionally, you should consult your academic advisor for personalized recommendations and updates on course availability.
