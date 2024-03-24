@@ -7,7 +7,7 @@ function Homepage({mode}) {
     let pageMode = `main-page, ${mode}`;
 
     return (
-        <div class={pageMode}>
+        <div s={pageMode}>
             <div class='container'>
                 <div class='container-left'>
                     <img src={rotundaLogo} alt="UVA Rotunda Logo " className='logo-large' />

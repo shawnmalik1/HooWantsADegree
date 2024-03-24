@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Dropdown from './Dropdown';
 import TextBox from './TextBox';
 import NavButton from './NavButton';
+import Papa from 'papaparse';
 
 const majors = [
     { value: 'biomedical engineering', label: 'Biomedical Engineering' },
@@ -35,13 +36,10 @@ const semesters = [
     { value: '8', label: '8' },
 ];
 
-const courses = [];
-
 function DegreeBuilder({ mode }) {
     const [selectedMajor, setSelectedMajor] = useState('');
     const [selectedYear, setSelectedYear] = useState('');
     const [selectedSemesters, setSelectedSemesters] = useState('');
-    const [selectedCourses, setSelectedCourses] = useState([]);
     const [professionalInterests, setProfessionalInterests] = useState('');
     const [personalInterests, setPersonalInterests] = useState('');
 
@@ -62,36 +60,8 @@ function DegreeBuilder({ mode }) {
     const majorSelection = <Dropdown items={majors} onChange={handleDropdownChange(setSelectedMajor)} />;
     const yearSelection = <Dropdown items={years} onChange={handleDropdownChange(setSelectedYear)} />;
     const semesterSelection = <Dropdown items={semesters} onChange={handleDropdownChange(setSelectedSemesters)} />;
-    const courseSelection = <Dropdown items={courses} onChange={handleDropdownChange(setSelectedCourses)} isMulti />;
     const profInterests = <TextBox onChange={handleTextBoxChange(setProfessionalInterests)} placeholder="Enter your professional interests" />;
     const persIntersts = <TextBox onChange={handleTextBoxChange(setPersonalInterests)} placeholder="Enter your personal interests" />;
-
-    const handleSave = () => {
-        // Construct data object with the values
-        const data = {
-            major: majorSelection.value,
-            year: yearSelection.value,
-            semesters: semesterSelection.value,
-            courses: selectedCourses.value,
-            professionalInterests: profInterests.target.value,
-            personalInterests: persIntersts.target.value
-        };
-
-        // Convert data object to a string
-        const text = JSON.stringify(data, null, 2); // Pretty print the JSON
-
-        // Create a blob containing the text
-        const blob = new Blob([text], { type: 'text/plain' });
-
-        // Create a temporary anchor element to download the file
-        const anchor = document.createElement('a');
-        anchor.download = 'degree_data.txt';
-        anchor.href = URL.createObjectURL(blob);
-        anchor.click();
-
-        // Release the object URL
-        URL.revokeObjectURL(anchor.href);
-    };
 
     return (
         <div className={pageMode}>
@@ -102,8 +72,6 @@ function DegreeBuilder({ mode }) {
             {yearSelection}
             <h3>How many semesters do you have left?</h3>
             {semesterSelection}
-            <h3>Select all courses you have taken so far or already have credit for:</h3>
-            {courseSelection}
             <h3>Enter your professional interests:</h3>
             {profInterests}
             <h3>Enter your personal interests:</h3>
