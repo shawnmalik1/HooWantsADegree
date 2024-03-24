@@ -1,10 +1,12 @@
 from openai import OpenAI
 
 def perplexityAI(majorName):
+    open('courseSchedule.txt', 'w').close()
     with open('.env', 'r') as file:
         API_KEY = file.readline()
     model = 'pplx-7b-online'
-    prompt = f'Give me a 4 year plan semester by semester for a {majorName} major at the University Of Virginia based on the University Of Virginia requirements. Please dont repeat classes'
+    prompt = f'Give me a 4 year plan semester by semester for a {majorName} major at the University Of Virginia based on the University Of Virginia requirements. Please dont repeat class suggestions,' \
+             f'and please give specific classes.'
 
     messages = [
         {
@@ -28,4 +30,8 @@ def perplexityAI(majorName):
         messages=messages,
         max_tokens=4000
     )
-    print(response.choices[0].message.content)
+
+    with open("courseSchedule.txt", mode="wt") as file:
+        file.write(response.choices[0].message.content)
+
+   # print(response.choices[0].message.content)

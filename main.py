@@ -2,7 +2,7 @@ import UVAEngineeringCourses
 import perplexityAI_Integration
 
 def run_program():
-    perplexityAI_Integration.perplexityAI('Electrical Engineering')
+    perplexityAI_Integration.perplexityAI('Computer Science')
 
 
 

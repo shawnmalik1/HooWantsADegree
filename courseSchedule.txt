@@ -1,0 +1,55 @@
+Here is a suggested 4-year plan for a Computer Science major at the University of Virginia, assuming you start in the fall semester as a freshman:
+
+**Freshman Year:**
+- Fall Semester:
+    - CS 1110: Introduction to Programming (3 credits)
+    - Math and Science Elective (3 credits)
+    - General Education courses
+- Spring Semester:
+    - CS 1111: Introduction to Programming (3 credits)
+    - Math and Science Elective (3 credits)
+    - General Education courses
+- Summer Session (optional):
+    - Additional courses or internships
+
+**Sophomore Year:**
+- Fall Semester:
+    - CS 2100: Data Structures and Algorithms 1 (3 credits)
+    - CS 2120: Discrete Mathematics for Computer Scientists (3 credits)
+    - CS 2130: Theory of Computation (3 credits)
+    - General Education courses
+- Spring Semester:
+    - CS 3100: Introduction to Software Development (3 credits)
+    - CS 3120: Operating Systems (3 credits)
+    - General Education courses
+- Summer Session (optional):
+    - Additional courses or internships
+
+**Junior Year:**
+- Fall Semester:
+    - CS 3130: Advanced Data Structures (3 credits)
+    - CS 3140: Advanced Algorithms (3 credits)
+    - CS 3240: Advanced Software Development (3 credits)
+    - General Education courses
+- Spring Semester:
+    - CS 4100: Advanced Topics in Computer Science (3 credits)
+    - CS 4110: Advanced Topics in Computer Science (3 credits)
+    - General Education courses
+- Summer Session (optional):
+    - Additional courses or internships
+
+**Senior Year:**
+- Fall Semester:
+    - CS 4120: Advanced Topics in Computer Science (3 credits)
+    - CS 4130: Advanced Topics in Computer Science (3 credits)
+    - STS 4500: STS and Engineering Practice (3 credits)
+    - Thesis Project (6 credits)
+- Spring Semester:
+    - CS 4140: Advanced Topics in Computer Science (3 credits)
+    - CS 4150: Advanced Topics in Computer Science (3 credits)
+    - STS 4600: The Engineer, Ethics, and Professional Responsibility (3 credits)
+    - Thesis Project (6 credits)
+- Summer Session (optional):
+    - Complete the thesis project or work on research projects
+
+Please note that this plan assumes you will complete all required general education courses within your first two years, and that you will take additional elective courses as needed to meet the total credit requirements for graduation. Also, the specific course titles may vary depending on changes in the curriculum over time. Be sure to consult the University of Virginia's Undergraduate Record for the most up-to-date program requirements.
