@@ -6,10 +6,6 @@ import TextBox from './TextBox';
 function EmailResults({mode}) {
     let pageMode = `main-page, ${mode}`;
 
-    const email = () => {
-        
-    };
-
     const downloadPDF = () => {
         const pdf = '/Users/smyansengupta/Documents/GitHub/HooWantsADegree/src/schedule.pdf';
         const pdfLink = document.createElement('a');
@@ -27,8 +23,6 @@ function EmailResults({mode}) {
                 fileType='pdf'
                 filePath='/Users/smyansengupta/Documents/GitHub/HooWantsADegree/src/schedule.pdf'
             /> */}
-            <p>If you would like to receive a PDF of your results, enter your email below.</p>
-            <TextBox />
             <br></br>
             <button onClick={downloadPDF}>
                 Download PDF
