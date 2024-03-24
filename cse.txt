@@ -1,0 +1,40 @@
+Course Code,Course Name,Semester
+APMA 1110,Single Variable Calculus II,1
+CHEM 1601,Introductory Chemistry I for Engineers,1
+CHEM 1611,Intro Chemistry I for Engineers Lab,1
+ENGR 1624,Introduction to Engineering,1
+STS 1500,"Science, Technology, and Contemporary Issues",1
+APMA 2120,Multivariable Calculus,2
+CS 111x,Introduction to Programming,2
+PHYS 1425,Introductory Physics I for Engineers,2
+PHYS 1429,Introductory Physics I Workshop,2
+APMA 1501,Special Topics in Applied Mathematics,2
+PHIL 1740,Issues of Life and Death,2
+ECE 2300,Applied Circuits,3
+ECE 2330,Digital Logic Design,3
+CS 2100,Data Structures and Algorithms I,3
+APMA 2130,Ordinary Differential Equations,3
+ECE 3430,Introduction to Embedded Computer Systems,4
+CS 2130,Computer Systems and Organization I, 4
+ECE 2600,Electronics,4
+ECE 2700,Signals and Systems,4
+ECE 2200,Applied Physics,5
+CS 3130,Computer Systems and Organization II,5
+CS 3140,Software Development Essentials,5
+CS 3330,Computer Architecture,5
+SYS 3023,Human Machine Interface,5
+STS 2870,Scientific and Technological Thinking,6
+ECE 4435,Computer Architecture and Design,6
+CS 3102,Theory of Computation,6
+APMA 3100,Probability,6
+SYS 3054,Systems Case Studies,6
+STS 4500,STS and Engineering Practice,7
+CS 4330,Advanced Computer Architecture,7
+CS 4434,Dependable Computing Systems,7
+ECE 4440, Embedded System Design,7
+SYS 4053,Systems Design I,7
+STS 4600,"The Engineer,Ethics, and Professional Responsibility",8
+CS 4444,Introduction to Parallel Computing,8
+PHIL 2420,Introduction to Symbolic Logic,8
+PHIL 3620,Science Fiction & Philosophy,8
+SYS 4054,Systems Design II,8
