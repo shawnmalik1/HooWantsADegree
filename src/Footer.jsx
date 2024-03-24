@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Footer(mode) {
+function Footer({mode}) {
     let footerMode = `footer, ${mode}`;
 
     return (

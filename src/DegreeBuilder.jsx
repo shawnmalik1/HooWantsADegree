@@ -37,7 +37,7 @@ const semesters = [
 
 const courses = [];
 
-function DegreeBuilder(mode) {
+function DegreeBuilder({mode}) {
     let pageMode = `main-page, ${mode}`;
 
     return (
@@ -54,7 +54,7 @@ function DegreeBuilder(mode) {
             <TextBox />
             <h3>Enter your personal interests:</h3>
             <TextBox />
-            <NavButton destination='./' text='Hoo wants a degree?' />
+            <NavButton destination='/email-results' text='Hoo wants a degree?' />
         </div>
     );
 }

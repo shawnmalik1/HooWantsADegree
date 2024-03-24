@@ -3,7 +3,7 @@ import rotundaLogo from './uva-rotunda-logo.svg';
 import './index.css';
 import NavButton from './NavButton';
 
-function Homepage(mode) {
+function Homepage({mode}) {
     let pageMode = `main-page, ${mode}`;
 
     return (
