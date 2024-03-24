@@ -17,6 +17,19 @@ body {
   font-size: 14pt; /* 14pt font size */
 }
 
+h1 {
+  color: var(--uva-orange);
+}
+
+button {
+  background-color: var(--uva-blue);
+  color: var(--uva-orange);
+  width: 200px;
+  height: 50px;
+  font-size: large;
+  border-radius: 10px;
+}
+
 /* Light mode styles */
 .light-mode {
   --primary-color: var(--uva-blue);

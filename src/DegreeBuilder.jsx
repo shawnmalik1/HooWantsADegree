@@ -111,9 +111,10 @@ function DegreeBuilder({ mode }) {
             {profInterests}
             <h3>Enter your personal interests:</h3>
             {persIntersts}
+            <br></br>
             
             {/* Button to save data */}
-            <button onClick={handleSave}>Hoo wants a degree?</button>
+            <NavButton destination='/email-results' text='Hoo wants a degree?'></NavButton>
         </div>
     );
 }
