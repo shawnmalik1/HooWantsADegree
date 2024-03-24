@@ -39,6 +39,10 @@ body {
 .header {
   background-color: var(--primary-color);
   color: var(--secondary-color);
+  flex-direction: 'row';
+  justify-content: 'space-between';
+  align-items: 'center';
+  padding: 10;
 }
 
 .footer {

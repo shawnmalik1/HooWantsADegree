@@ -3,7 +3,7 @@ import Select from 'react-select';
 import './index.css';
 
 function Dropdown({ items }) {
-    const [selectedItem, setSelectedItem] = useState(null);
+    const [selectedItem, setSelectedItem] = useState('');
 
     const change = (item) => {
         setSelectedItem(item);

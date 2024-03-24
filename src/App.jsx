@@ -12,6 +12,7 @@ import DegreeBuilder from './DegreeBuilder';
 import NavButton from './NavButton'
 import TextBox from './TextBox';
 import EmailResults from './EmailResults';
+import About from './About';
 
 const mode = "light-mode"
 
@@ -24,6 +25,7 @@ function App() {
                     <Route path="/" element={<Homepage mode={mode} />} />
                     <Route path="/degree-builder" element={<DegreeBuilder mode={mode} />} />
                     <Route path="/email-results" element={<EmailResults mode={mode} />} />
+                    <Route path="about" element={<About mode={mode} />} />
                 </Routes>
             </Router>
             {/* <Footer /> */}

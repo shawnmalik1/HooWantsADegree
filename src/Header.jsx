@@ -1,6 +1,7 @@
 import React from 'react';
 import uvaLogo from  './Virginia Cavaliers logo.svg';
 import './index.css';
+import About from './About';
 
 function Header({mode}) {
     let headerMode = `header, ${mode}`;
