@@ -1,6 +1,6 @@
 # HooWantsADegree! 🎓
 
-HooWantsADegree An AI Degree Builder that helps fellow Hoos create a 4-year plan for college based on their respective major.
+HooWantsADegree is an AI Degree Builder that helps fellow Hoos create a 4-year plan for college based on their respective major.
 
 ## Technologies Used 👨‍💻
 
